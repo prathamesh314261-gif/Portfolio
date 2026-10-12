@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prathamesh Thombare — AI/ML Engineering Portfolio</title>
+  <meta name="description" content="Portfolio of Prathamesh Santosh Thombare, a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning. Explore projects in Python, computer vision, robotics, and fintech." />
+  <meta name="keywords" content="AI, ML, Machine Learning, Python, Computer Vision, Portfolio, Prathamesh Thombare" />
+  <meta name="author" content="Prathamesh Santosh Thombare" />
+  <meta name="theme-color" content="#111111" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Prathamesh Thombare — AI/ML Engineering Portfolio" />
+  <meta property="og:description" content="AI/ML engineering student building practical software and intelligent systems." />
+  <meta property="og:type" content="website" />
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       CURSOR FOLLOWER
+  ═══════════════════════════════════════════════════════════════ -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════════════════ -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav-container" aria-label="Primary navigation">
+      <a href="#hero" class="nav-logo" id="navLogo" aria-label="Home">
+        <span class="logo-text">PT</span>
+        <span class="logo-dot"></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#about" class="nav-link" data-nav>About</a></li>
+        <li><a href="#skills" class="nav-link" data-nav>Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-nav>Projects</a></li>
+        <li><a href="#certifications" class="nav-link" data-nav>Certifications</a></li>
+        <li><a href="#interests" class="nav-link" data-nav>Interests</a></li>
+        <li><a href="#contact" class="nav-link" data-nav>Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://github.com/prathamesh314261-gif" target="_blank" rel="noopener noreferrer" class="nav-social-link" id="navGithub" aria-label="GitHub Profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/prathamesh-thombare-a49433392/" target="_blank" rel="noopener noreferrer" class="nav-social-link" id="navLinkedin" aria-label="LinkedIn Profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile nav overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true">
+    <ul class="mobile-nav-links" role="list">
+      <li><a href="#about" class="mobile-nav-link" data-mobile-nav>About</a></li>
+      <li><a href="#skills" class="mobile-nav-link" data-mobile-nav>Skills</a></li>
+      <li><a href="#projects" class="mobile-nav-link" data-mobile-nav>Projects</a></li>
+      <li><a href="#certifications" class="mobile-nav-link" data-mobile-nav>Certifications</a></li>
+      <li><a href="#interests" class="mobile-nav-link" data-mobile-nav>Interests</a></li>
+      <li><a href="#contact" class="mobile-nav-link" data-mobile-nav>Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- ══════════════════════════════════════════════════════════════
+         HERO SECTION
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-badge" id="heroBadge">
+          <span class="badge-dot"></span>
+          <span>AI/ML Engineering Student</span>
+        </div>
+
+        <h1 class="hero-title" id="heroTitle">
+          <span class="hero-line hero-line-1">
+            <span class="hero-word" data-reveal>Building</span>
+          </span>
+          <span class="hero-line hero-line-2">
+            <span class="hero-word" data-reveal>Intelligent</span>
+            <span class="hero-word hero-word-accent" data-reveal>Systems</span>
+          </span>
+          <span class="hero-line hero-line-3">
+            <span class="hero-word" data-reveal>Through</span>
+            <span class="hero-word" data-reveal>Code</span>
+          </span>
+        </h1>
+
+        <p class="hero-description" id="heroDescription">
+          I'm <strong>Prathamesh Thombare</strong>, a second-year Computer Science Engineering student specializing in AI &amp; ML. I learn by building practical software, exploring computer vision, and experimenting with intelligent automation.
+        </p>
+
+        <div class="hero-cta" id="heroCTA">
+          <a href="#projects" class="btn btn-primary" id="heroProjectsBtn">
+            <span>View Projects</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary" id="heroContactBtn">
+            <span>Get in Touch</span>
+          </a>
+        </div>
+
+        <div class="hero-stats" id="heroStats">
+          <div class="hero-stat" data-reveal-stat>
+            <span class="stat-number" data-count="5">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Project Areas</span>
+          </div>
+          <div class="hero-stat" data-reveal-stat>
+            <span class="stat-number" data-count="8">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+          <div class="hero-stat" data-reveal-stat>
+            <span class="stat-number" data-count="2029">2025</span>
+            <span class="stat-label">Expected Grad</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator" id="heroScroll" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span class="scroll-text">Scroll</span>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         ABOUT SECTION
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="section section-about" id="about">
+      <div class="container">
+        <div class="section-label" data-animate>
+          <span class="label-number">01</span>
+          <span class="label-line"></span>
+          <span class="label-text">About</span>
+        </div>
+
+        <div class="about-grid">
+          <!-- Profile Photo & Info Card -->
+          <aside class="about-photo-col" data-animate>
+            <div class="about-photo-card">
+              <div class="about-photo-frame">
+                <img
+                  src="assets/profile-pic.jpg"
+                  alt="Prathamesh Santosh Thombare — AI/ML Engineering Student"
+                  class="about-profile-img"
+                  width="400"
+                  height="400"
+                />
+                <div class="about-photo-status">
+                  <span class="status-indicator"></span>
+                  <span>Open to Internships</span>
+                </div>
+              </div>
+              <div class="about-photo-caption">
+                <span class="about-photo-name">Prathamesh Thombare</span>
+                <span class="about-photo-role">CSE — AI &amp; ML · Batch 2029</span>
+                <div class="about-photo-tags">
+                  <span class="photo-tag">Machine Learning</span>
+                  <span class="photo-tag">Computer Vision</span>
+                  <span class="photo-tag">Python</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- About Main Body -->
+          <div class="about-main" data-animate>
+            <div class="about-heading">
+              <h2 class="section-title">
+                Student today,<br/>
+                <span class="text-accent">engineer</span> tomorrow.
+              </h2>
+            </div>
+
+            <div class="about-content">
+              <p class="about-text about-text-lead">
+                I'm a second-year Computer Science Engineering student on the AI/ML track. My approach to learning is project-driven — I pick real-world problems, break them down, and build solutions that work.
+              </p>
+              <p class="about-text">
+                My current focus areas include Python development, prompt engineering, and computer vision. I'm also exploring the intersection of AI with financial technology — building tools for stock analysis and decision support.
+              </p>
+              <p class="about-text">
+                I'm drawn to the spaces where machine learning meets practical applications: gesture recognition in robotics, intelligent automation pipelines, and systems that help people make better decisions with data.
+              </p>
+              <p class="about-text">
+                Outside of academics, I'm building a foundation in database management, software development practices, and research methodologies — skills I believe are essential for any engineer working at the frontier of AI.
+              </p>
+
+              <div class="about-highlights">
+                <div class="highlight-item" data-animate>
+                  <div class="highlight-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                  </div>
+                  <div>
+                    <h3 class="highlight-title">CSE — AI/ML</h3>
+                    <p class="highlight-desc">Second-year engineering student, graduating 2029</p>
+                  </div>
+                </div>
+                <div class="highlight-item" data-animate>
+                  <div class="highlight-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  </div>
+                  <div>
+                    <h3 class="highlight-title">Learning by Building</h3>
+                    <p class="highlight-desc">Project-driven approach to mastering new technologies</p>
+                  </div>
+                </div>
+                <div class="highlight-item" data-animate>
+                  <div class="highlight-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                  </div>
+                  <div>
+                    <h3 class="highlight-title">Open to Opportunities</h3>
+                    <p class="highlight-desc">Internships, collaborations, and research projects</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         SKILLS SECTION
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="section section-skills" id="skills">
+      <div class="container">
+        <div class="section-label" data-animate>
+          <span class="label-number">02</span>
+          <span class="label-line"></span>
+          <span class="label-text">Skills &amp; Tools</span>
+        </div>
+
+        <h2 class="section-title" data-animate>
+          Technologies I work with<span class="text-accent">.</span>
+        </h2>
+
+        <div class="skills-grid">
+
+          <!-- Skill Category 1 -->
+          <div class="skill-category" data-animate>
+            <div class="skill-category-header">
+              <div class="skill-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2z"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <h3 class="skill-category-title">AI &amp; Machine Learning</h3>
+            </div>
+            <p class="skill-category-desc">Exploring foundational ML concepts, model training, and applied AI through coursework and personal projects.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Machine Learning</span>
+              <span class="skill-tag">Computer Vision</span>
+              <span class="skill-tag">Prompt Engineering</span>
+              <span class="skill-tag">Gesture Recognition</span>
+              <span class="skill-tag">Intelligent Automation</span>
+            </div>
+          </div>
+
+          <!-- Skill Category 2 -->
+          <div class="skill-category" data-animate>
+            <div class="skill-category-header">
+              <div class="skill-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+              </div>
+              <h3 class="skill-category-title">Programming &amp; Development</h3>
+            </div>
+            <p class="skill-category-desc">Building software with Python as my primary language, alongside web technologies for frontend interfaces.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">HTML &amp; CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Software Development</span>
+              <span class="skill-tag">Database Management</span>
+            </div>
+          </div>
+
+          <!-- Skill Category 3 -->
+          <div class="skill-category" data-animate>
+            <div class="skill-category-header">
+              <div class="skill-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+              </div>
+              <h3 class="skill-category-title">Data &amp; Finance</h3>
+            </div>
+            <p class="skill-category-desc">Exploring the use of data-driven approaches for stock analysis, decision-support systems, and financial technology.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Stock Analysis</span>
+              <span class="skill-tag">Decision Support</span>
+              <span class="skill-tag">Financial Technology</span>
+              <span class="skill-tag">Data Analysis</span>
+            </div>
+          </div>
+
+          <!-- Skill Category 4 -->
+          <div class="skill-category" data-animate>
+            <div class="skill-category-header">
+              <div class="skill-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <h3 class="skill-category-title">Tools &amp; Platforms</h3>
+            </div>
+            <p class="skill-category-desc">Using modern development tools, version control, and platforms to build, deploy, and manage projects.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Git &amp; GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Google Colab</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">Research Tools</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         PROJECTS SECTION
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="section section-projects" id="projects">
+      <div class="container">
+        <div class="section-label" data-animate>
+          <span class="label-number">03</span>
+          <span class="label-line"></span>
+          <span class="label-text">Projects</span>
+        </div>
+
+        <h2 class="section-title" data-animate>
+          What I've been <span class="text-accent">building</span>.
+        </h2>
+        <p class="section-subtitle" data-animate>
+          A selection of projects that reflect my learning journey — from AI experiments to practical software tools.
+        </p>
+
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <article class="project-card project-card-featured" data-animate id="project1">
+            <div class="project-card-inner">
+              <div class="project-meta">
+                <span class="project-number">01</span>
+                <div class="project-tags-row">
+                  <span class="project-tag">Computer Vision</span>
+                  <span class="project-tag">Python</span>
+                </div>
+              </div>
+              <h3 class="project-title">Gesture-Based Control System</h3>
+              <p class="project-description">
+                A real-time gesture recognition system using computer vision to translate hand gestures into device commands. Built with Python and OpenCV, exploring the intersection of human-computer interaction and robotics.
+              </p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>OpenCV</span>
+                <span>MediaPipe</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/prathamesh314261-gif" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View source code on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  <span>Source</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-animate id="project2">
+            <div class="project-card-inner">
+              <div class="project-meta">
+                <span class="project-number">02</span>
+                <div class="project-tags-row">
+                  <span class="project-tag">FinTech</span>
+                  <span class="project-tag">Python</span>
+                </div>
+              </div>
+              <h3 class="project-title">Stock Analysis Dashboard</h3>
+              <p class="project-description">
+                A decision-support tool that aggregates market data and applies basic analytical methods to visualize stock trends. Designed to practice data handling, API integration, and financial data interpretation.
+              </p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>APIs</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/prathamesh314261-gif" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View source code on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  <span>Source</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-animate id="project3">
+            <div class="project-card-inner">
+              <div class="project-meta">
+                <span class="project-number">03</span>
+                <div class="project-tags-row">
+                  <span class="project-tag">Automation</span>
+                  <span class="project-tag">AI</span>
+                </div>
+              </div>
+              <h3 class="project-title">Prompt Engineering Toolkit</h3>
+              <p class="project-description">
+                A collection of structured prompt templates and workflows for various AI tasks — from code generation to data extraction. Built to explore effective human-AI communication patterns.
+              </p>
+              <div class="project-tech">
+                <span>Prompt Design</span>
+                <span>LLM APIs</span>
+                <span>Python</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/prathamesh314261-gif" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View source code on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  <span>Source</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" data-animate id="project4">
+            <div class="project-card-inner">
+              <div class="project-meta">
+                <span class="project-number">04</span>
+                <div class="project-tags-row">
+                  <span class="project-tag">Web Dev</span>
+                  <span class="project-tag">Design</span>
+                </div>
+              </div>
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-description">
+                This portfolio itself — designed and developed from scratch using HTML, CSS, and vanilla JavaScript. Features responsive design, smooth animations, and a custom minimalist aesthetic.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/prathamesh314261-gif" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View source code on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  <span>Source</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="projects-cta" data-animate>
+          <a href="https://github.com/prathamesh314261-gif" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="viewAllProjects">
+            <span>View All on GitHub</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         CERTIFICATIONS & ACHIEVEMENTS SECTION
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="section section-certifications" id="certifications" aria-label="Certifications and Achievements">
+      <div class="container">
+        <div class="section-label" data-animate>
+          <span class="label-number">04</span>
+          <span class="label-line"></span>
+          <span class="label-text">Certifications</span>
+        </div>
+
+        <h2 class="section-title" data-animate>
+          Certifications &amp; <span class="text-accent">Achievements</span>.
+        </h2>
+        <p class="section-subtitle" data-animate>
+          Continuously learning, developing technical skills, and participating in activities that encourage innovation, research, and personal growth.
+        </p>
+
+        <!-- Filter Bar -->
+        <div class="cert-filters" id="certFilters" role="group" aria-label="Filter certificates by category" data-animate>
+          <button class="cert-filter-btn active" data-filter="all" id="filter-all" aria-pressed="true">All</button>
+          <button class="cert-filter-btn" data-filter="Artificial Intelligence" id="filter-ai" aria-pressed="false">Artificial Intelligence</button>
+          <button class="cert-filter-btn" data-filter="Deep Learning" id="filter-dl" aria-pressed="false">Deep Learning</button>
+          <button class="cert-filter-btn" data-filter="Natural Language Processing" id="filter-nlp" aria-pressed="false">Natural Language Processing</button>
+          <button class="cert-filter-btn" data-filter="Personal Development" id="filter-pd" aria-pressed="false">Personal Development</button>
+          <button class="cert-filter-btn" data-filter="Innovation and Research" id="filter-ir" aria-pressed="false">Innovation &amp; Research</button>
+        </div>
+
+        <!-- Certificate Grid -->
+        <div class="cert-grid" id="certGrid" aria-live="polite" aria-atomic="false">
+
+          <!-- Certificate 1 -->
+          <article class="cert-card" data-category="Artificial Intelligence" data-animate id="cert1">
+            <a href="assets/certificates/artificial-intelligence-foundation.pdf"
+               target="_blank" rel="noopener noreferrer"
+               class="cert-preview-link"
+               aria-label="Open Artificial Intelligence Foundation Certification PDF in new tab">
+              <div class="cert-preview">
+                <img src="assets/certificates/previews/artificial-intelligence-foundation.webp"
+                     alt="Preview of Artificial Intelligence Foundation Certification issued by Infosys"
+                     loading="lazy"
+                     class="cert-preview-img" />
+                <div class="cert-preview-overlay" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>View Certificate</span>
+                </div>
+              </div>
+            </a>
+            <div class="cert-body">
+              <div class="cert-meta-row">
+                <span class="cert-category-badge" data-cat="Artificial Intelligence">Artificial Intelligence</span>
+                <span class="cert-date">Jan 13, 2026</span>
+              </div>
+              <h3 class="cert-title">Artificial Intelligence Foundation Certification</h3>
+              <p class="cert-issuer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                Infosys
+              </p>
+              <p class="cert-description">Completed the Artificial Intelligence Foundation Certification, demonstrating engagement with foundational AI learning.</p>
+              <a href="assets/certificates/artificial-intelligence-foundation.pdf"
+                 target="_blank" rel="noopener noreferrer"
+                 class="cert-view-btn"
+                 aria-label="Open Artificial Intelligence Foundation Certification in new tab">
+                <span>View Certificate</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Certificate 2 -->
+          <article class="cert-card" data-category="Artificial Intelligence" data-animate id="cert2">
+            <a href="assets/certificates/introduction-to-artificial-intelligence.pdf"
+               target="_blank" rel="noopener noreferrer"
+               class="cert-preview-link"
+               aria-label="Open Introduction to Artificial Intelligence PDF in new tab">
+              <div class="cert-preview">
+                <img src="assets/certificates/previews/introduction-to-artificial-intelligence.webp"
+                     alt="Preview of Introduction to Artificial Intelligence certificate issued by Infosys"
+                     loading="lazy"
+                     class="cert-preview-img" />
+                <div class="cert-preview-overlay" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>View Certificate</span>
+                </div>
+              </div>
+            </a>
+            <div class="cert-body">
+              <div class="cert-meta-row">
+                <span class="cert-category-badge" data-cat="Artificial Intelligence">Artificial Intelligence</span>
+                <span class="cert-date">Jan 13, 2026</span>
+              </div>
+              <h3 class="cert-title">Introduction to Artificial Intelligence</h3>
+              <p class="cert-issuer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                Infosys
+              </p>
+              <p class="cert-description">Completed an introductory course focused on Artificial Intelligence.</p>
+              <a href="assets/certificates/introduction-to-artificial-intelligence.pdf"
+                 target="_blank" rel="noopener noreferrer"
+                 class="cert-view-btn"
+                 aria-label="Open Introduction to Artificial Intelligence certificate in new tab">
+                <span>View Certificate</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Certificate 3 -->
+          <article class="cert-card" data-category="Deep Learning" data-animate id="cert3">
+            <a href="assets/certificates/introduction-to-deep-learning.pdf"
+               target="_blank" rel="noopener noreferrer"
+               class="cert-preview-link"
+               aria-label="Open Introduction to Deep Learning PDF in new tab">
+              <div class="cert-preview">
+                <img src="assets/certificates/previews/introduction-to-deep-learning.webp"
+                     alt="Preview of Introduction to Deep Learning certificate issued by Infosys"
+                     loading="lazy"
+                     class="cert-preview-img" />
+                <div class="cert-preview-overlay" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>View Certificate</span>
+                </div>
+              </div>
+            </a>
+            <div class="cert-body">
+              <div class="cert-meta-row">
+                <span class="cert-category-badge" data-cat="Deep Learning">Deep Learning</span>
+                <span class="cert-date">Jan 13, 2026</span>
+              </div>
+              <h3 class="cert-title">Introduction to Deep Learning</h3>
+              <p class="cert-issuer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                Infosys
+              </p>
+              <p class="cert-description">Completed an introductory course in Deep Learning as part of ongoing technical development in AI.</p>
+              <a href="assets/certificates/introduction-to-deep-learning.pdf"
+                 target="_blank" rel="noopener noreferrer"
+                 class="cert-view-btn"
+                 aria-label="Open Introduction to Deep Learning certificate in new tab">
+                <span>View Certificate</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Certificate 4 -->
+          <article class="cert-card" data-category="Natural Language Processing" data-animate id="cert4">
+            <a href="assets/certificates/introduction-to-natural-language-processing.pdf"
+               target="_blank" rel="noopener noreferrer"
+               class="cert-preview-link"
+               aria-label="Open Introduction to Natural Language Processing PDF in new tab">
+              <div class="cert-preview">
+                <img src="assets/certificates/previews/introduction-to-natural-language-processing.webp"
+                     alt="Preview of Introduction to Natural Language Processing certificate issued by Infosys"
+                     loading="lazy"
+                     class="cert-preview-img" />
+                <div class="cert-preview-overlay" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>View Certificate</span>
+                </div>
+              </div>
+            </a>
+            <div class="cert-body">
+              <div class="cert-meta-row">
+                <span class="cert-category-badge" data-cat="Natural Language Processing">NLP</span>
+                <span class="cert-date">Jan 13, 2026</span>
+              </div>
+              <h3 class="cert-title">Introduction to Natural Language Processing</h3>
+              <p class="cert-issuer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                Infosys
+              </p>
+              <p class="cert-description">Completed an introductory course in Natural Language Processing, a field concerned with computational processing of human language.</p>
+              <a href="assets/certificates/introduction-to-natural-language-processing.pdf"
+                 target="_blank" rel="noopener noreferrer"
+                 class="cert-view-btn"
+                 aria-label="Open Introduction to Natural Language Processing certificate in new tab">
+                <span>View Certificate</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Certificate 5 -->
+          <article class="cert-card" data-category="Personal Development" data-animate id="cert5">
+            <a href="assets/certificates/dys-course-completion.pdf"
+               target="_blank" rel="noopener noreferrer"
+               class="cert-preview-link"
+               aria-label="Open DYS Course Certificate of Completion PDF in new tab">
+              <div class="cert-preview">
+                <img src="assets/certificates/previews/dys-course-completion.webp"
+                     alt="Preview of DYS Course Certificate of Completion from Personality Development Club, VIT"
+                     loading="lazy"
+                     class="cert-preview-img" />
+                <div class="cert-preview-overlay" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>View Certificate</span>
+                </div>
+              </div>
+            </a>
+            <div class="cert-body">
+              <div class="cert-meta-row">
+                <span class="cert-category-badge" data-cat="Personal Development">Personal Development</span>
+                <span class="cert-date">Oct 2025</span>
+              </div>
+              <h3 class="cert-title">DYS Course — Certificate of Completion</h3>
+              <p class="cert-issuer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                Personality Development Club, VIT
+              </p>
+              <p class="cert-description">Successfully completed the DYS Course conducted by the Personality Development Club, VIT, in October 2025.</p>
+              <a href="assets/certificates/dys-course-completion.pdf"
+                 target="_blank" rel="noopener noreferrer"
+                 class="cert-view-btn"
+                 aria-label="Open DYS Course Certificate of Completion in new tab">
+                <span>View Certificate</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Certificate 6 -->
+          <article class="cert-card" data-category="Innovation and Research" data-animate id="cert6">
+            <a href="assets/certificates/prism-25-participation.png"
+               target="_blank" rel="noopener noreferrer"
+               class="cert-preview-link"
+               aria-label="Open PRISM-25 Certificate of Participation image in new tab">
+              <div class="cert-preview">
+                <img src="assets/certificates/previews/prism-25-participation.webp"
+                     alt="Certificate of Participation for PRISM-25, issued by Social Welfare and Development Committee, Vishwakarma Institute of Technology, Pune, to Thombare Prathamesh Santosh"
+                     loading="lazy"
+                     class="cert-preview-img" />
+                <div class="cert-preview-overlay" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>View Certificate</span>
+                </div>
+              </div>
+            </a>
+            <div class="cert-body">
+              <div class="cert-meta-row">
+                <span class="cert-category-badge" data-cat="Innovation and Research">Innovation &amp; Research</span>
+                <span class="cert-date">Oct 11, 2025</span>
+              </div>
+              <h3 class="cert-title">PRISM-25 — Certificate of Participation</h3>
+              <p class="cert-issuer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                Social Welfare and Development Committee, VIT Pune
+              </p>
+              <p class="cert-description">Participated in PRISM-25, engaging with sessions and speaker interactions focused on innovation, sustainability, and social development.</p>
+              <a href="assets/certificates/prism-25-participation.png"
+                 target="_blank" rel="noopener noreferrer"
+                 class="cert-view-btn"
+                 aria-label="Open PRISM-25 Certificate of Participation in new tab">
+                <span>View Certificate</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Certificate 7 -->
+          <article class="cert-card" data-category="Innovation and Research" data-animate id="cert7">
+            <a href="assets/certificates/varithon-2026-participation.pdf"
+               target="_blank" rel="noopener noreferrer"
+               class="cert-preview-link"
+               aria-label="Open Varithon 2026 Stage 1 certificate PDF in new tab">
+              <div class="cert-preview">
+                <img src="assets/certificates/previews/varithon-2026-participation.webp"
+                     alt="Preview of Varithon 2026 Stage 1 Problem Discovery Report Submission certificate from Marathwada Mitramandal's College of Engineering, Pune"
+                     loading="lazy"
+                     class="cert-preview-img" />
+                <div class="cert-preview-overlay" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>View Certificate</span>
+                </div>
+              </div>
+            </a>
+            <div class="cert-body">
+              <div class="cert-meta-row">
+                <span class="cert-category-badge" data-cat="Innovation and Research">Innovation &amp; Research</span>
+              </div>
+              <h3 class="cert-title">Varithon 2026 — Stage 1: Problem Discovery Report Submission</h3>
+              <p class="cert-issuer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                Marathwada Mitramandal's College of Engineering, Pune
+              </p>
+              <p class="cert-description">Participated in Varithon 2026 Stage 1 by submitting a Problem Discovery Report focused on identifying real-world challenges and exploring meaningful solutions.</p>
+              <a href="assets/certificates/varithon-2026-participation.pdf"
+                 target="_blank" rel="noopener noreferrer"
+                 class="cert-view-btn"
+                 aria-label="Open Varithon 2026 Stage 1 certificate in new tab">
+                <span>View Certificate</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Empty State -->
+        <div class="cert-empty" id="certEmpty" aria-live="polite" hidden>
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <p>No certificates in this category yet.</p>
+        </div>
+
+        <!-- Achievements Highlights -->
+        <div class="achievements-section" data-animate>
+          <h3 class="achievements-heading">Featured Achievements</h3>
+          <div class="achievements-grid">
+
+            <div class="achievement-card" data-animate>
+              <div class="achievement-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2z"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div class="achievement-content">
+                <h4 class="achievement-title">Technical Learning</h4>
+                <p class="achievement-desc">Completed foundational learning in Artificial Intelligence, Deep Learning, and Natural Language Processing through documented course-completion certificates.</p>
+              </div>
+            </div>
+
+            <div class="achievement-card" data-animate>
+              <div class="achievement-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="achievement-content">
+                <h4 class="achievement-title">Innovation and Participation</h4>
+                <p class="achievement-desc">Participated in PRISM-25 and Varithon 2026 Stage 1, reflecting engagement with innovation, problem discovery, and real-world challenges.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         INTERESTS / EXPLORATION SECTION
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="section section-interests" id="interests">
+      <div class="container">
+        <div class="section-label" data-animate>
+          <span class="label-number">05</span>
+          <span class="label-line"></span>
+          <span class="label-text">Interests</span>
+        </div>
+
+        <h2 class="section-title" data-animate>
+          Areas I'm <span class="text-accent">exploring</span>.
+        </h2>
+
+        <div class="interests-grid">
+
+          <div class="interest-card" data-animate>
+            <div class="interest-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4m0 14v4m-9.5-9.5h4m14 0h4m-3.3-6.7-2.8 2.8M6.1 17.9l-2.8 2.8m0-13.4 2.8 2.8m11.6 7.8 2.8 2.8"/></svg>
+            </div>
+            <h3 class="interest-title">Computer Vision</h3>
+            <p class="interest-desc">Image processing, object detection, and visual data interpretation for real-world applications.</p>
+          </div>
+
+          <div class="interest-card" data-animate>
+            <div class="interest-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 0 0-4 4v4a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"/><path d="M5 10a7 7 0 0 0 14 0"/><line x1="12" y1="17" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg>
+            </div>
+            <h3 class="interest-title">Prompt Engineering</h3>
+            <p class="interest-desc">Crafting effective AI interactions through structured prompt design and workflow optimization.</p>
+          </div>
+
+          <div class="interest-card" data-animate>
+            <div class="interest-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="9" height="9" rx="1"/><rect x="13" y="2" width="9" height="9" rx="1"/><rect x="2" y="13" width="9" height="9" rx="1"/><rect x="13" y="13" width="9" height="9" rx="1"/></svg>
+            </div>
+            <h3 class="interest-title">Robotics &amp; IoT</h3>
+            <p class="interest-desc">Gesture-based control, hardware-software integration, and embedded intelligent systems.</p>
+          </div>
+
+          <div class="interest-card" data-animate>
+            <div class="interest-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 class="interest-title">Financial Technology</h3>
+            <p class="interest-desc">Stock analysis tools, decision-support systems, and data-driven financial applications.</p>
+          </div>
+
+          <div class="interest-card" data-animate>
+            <div class="interest-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3 class="interest-title">Research &amp; Innovation</h3>
+            <p class="interest-desc">Investigating emerging AI techniques, writing about technology, and exploring research methodologies.</p>
+          </div>
+
+          <div class="interest-card" data-animate>
+            <div class="interest-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/><circle cx="12" cy="7" r="3"/></svg>
+            </div>
+            <h3 class="interest-title">Tech Entrepreneurship</h3>
+            <p class="interest-desc">Exploring how technology and business intersect to solve real problems at scale.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         CONTACT SECTION
+    ═══════════════════════════════════════════════════════════════ -->
+    <section class="section section-contact" id="contact">
+      <div class="container">
+        <div class="section-label" data-animate>
+          <span class="label-number">06</span>
+          <span class="label-line"></span>
+          <span class="label-text">Contact</span>
+        </div>
+
+        <div class="contact-content">
+          <h2 class="contact-title" data-animate>
+            Let's work<br/>
+            <span class="text-accent">together</span>.
+          </h2>
+
+          <p class="contact-description" data-animate>
+            I'm open to internship opportunities, research collaborations, freelance projects, and conversations about AI/ML. If you have an interesting problem or opportunity, I'd love to hear about it.
+          </p>
+
+          <div class="contact-links" data-animate>
+            <a href="https://github.com/prathamesh314261-gif" target="_blank" rel="noopener noreferrer" class="contact-link-card" id="contactGithub">
+              <div class="contact-link-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </div>
+              <div class="contact-link-info">
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-value">prathamesh314261-gif</span>
+              </div>
+              <svg class="contact-link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+
+            <a href="https://www.linkedin.com/in/prathamesh-thombare-a49433392/" target="_blank" rel="noopener noreferrer" class="contact-link-card" id="contactLinkedin">
+              <div class="contact-link-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div class="contact-link-info">
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-value">Prathamesh Thombare</span>
+              </div>
+              <svg class="contact-link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-logo">PT<span class="logo-dot"></span></span>
+        <p class="footer-tagline">Building intelligent systems through code.</p>
+      </div>
+      <div class="footer-right">
+        <p class="footer-copy">&copy; <span id="footerYear">2026</span> Prathamesh Thombare</p>
+        <p class="footer-note">Designed &amp; developed from scratch.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
